@@ -1,3 +1,4 @@
+  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,46 +10,76 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:#0f2027;color:white}
+
+body{
+background:linear-gradient(135deg,#020024,#090979,#000000);
+color:white;
+scroll-behavior:smooth;
+}
 
 /* NAVBAR */
 nav{
 position:fixed;top:0;width:100%;
+background:#000000cc;
 display:flex;justify-content:space-between;align-items:center;
-padding:15px 40px;background:rgba(0,0,0,.7);backdrop-filter:blur(10px);
-z-index:1000;
+padding:15px 40px;z-index:1000
 }
-.logo{font-size:20px;font-weight:bold;color:#00f7ff}
-nav ul{display:flex;gap:25px;list-style:none}
-nav ul li a{color:white;text-decoration:none;transition:.3s}
-nav ul li a:hover{color:#00f7ff}
+.logo{color:#00f7ff;font-weight:700;font-size:20px}
+nav a{color:white;text-decoration:none;margin-left:20px}
+nav a:hover{color:#00f7ff}
 
 /* HERO */
 .hero{
 height:100vh;
-background:url('https://images.unsplash.com/photo-1588072432836-e10032774350') center/cover no-repeat;
-display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;
+background:url("https://images.unsplash.com/photo-1518779578993-ec3579fee39f") center/cover;
+display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
 }
-.hero h1{font-size:40px;background:rgba(0,0,0,.6);padding:15px 30px;border-radius:10px}
-.hero p{margin-top:15px;background:rgba(0,0,0,.6);padding:10px 20px;border-radius:10px}
+.hero h1{
+font-size:45px;
+background:#000000aa;
+padding:15px 30px;
+border-radius:12px;
+}
+.hero p{
+margin-top:10px;
+background:#000000aa;
+padding:10px 20px;
+border-radius:10px;
+}
 
 /* BUTTON */
-.pro-btn{
-margin-top:25px;
+.btn{
+margin-top:20px;
 background:linear-gradient(135deg,#00f7ff,#0072ff);
-color:white;
-padding:15px 35px;
-font-size:18px;
-border:none;
-border-radius:14px;
-cursor:pointer;
-font-weight:600;
-letter-spacing:.5px;
-box-shadow:0 8px 25px rgba(0,0,0,.35);
-transition:.25s;
+padding:14px 35px;
+border:none;border-radius:12px;
+color:white;font-size:17px;font-weight:600;
+cursor:pointer;transition:.25s
 }
-.pro-btn:hover{transform:scale(1.08);background:white;color:black}
+.btn:hover{transform:scale(1.1);background:white;color:black}
 
+/* SECTION */
+section{padding:100px 10%}
+.title{text-align:center;font-size:32px;color:#00f7ff;margin-bottom:40px}
+
+/* CARDS */
+.card{
+background:#0f172acc;
+padding:25px;
+border-radius:15px;
+margin:20px 0;
+text-align:center;
+box-shadow:0 0 25px #00f7ff33;
+}
+
+.card img{
+width:100%;
+max-width:350px;
+border-radius:12px;
+margin-bottom:15px;
+}
+
+/* FOOTER */
 footer{background:black;text-align:center;padding:20px}
 </style>
 </head>
@@ -57,53 +88,99 @@ footer{background:black;text-align:center;padding:20px}
 
 <nav>
 <div class="logo">IQRA FURQANIA SCHOOL</div>
-<ul>
-<li><a href="#">Home</a></li>
-</ul>
+<div>
+<a href="#home">Home</a>
+<a href="#admission">Admission</a>
+<a href="#students">Students</a>
+<a href="#tools">Tools</a>
+</div>
 </nav>
 
-<section class="hero">
-<h1>Welcome to IQRA FURQANIA SECONDARY SCHOOL</h1>
-<p>Excellence in Islamic & Modern Education</p>
+<!-- HERO -->
+<section class="hero" id="home">
+<h1>IQRA FURQANIA SECONDARY SCHOOL</h1>
+<p>Modern + Islamic Education System</p>
 
-<button class="pro-btn"
-onclick="openExternal('https://sites.google.com/view/yasirapps/tools')">
+<button class="btn" onclick="openLink('https://sites.google.com/view/yasirapps/tools')">
 🚀 Open Yasir Apps Tools
 </button>
+</section>
 
-<p style="opacity:.7;margin-top:15px;font-size:14px">
-Tap anywhere to enable sound experience
-</p>
+<!-- ADMISSION -->
+<section id="admission">
+<h2 class="title">Admissions Open</h2>
 
+<div class="card">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+<h3>New Session Admissions Started</h3>
+<p>Monthly Fee: Rs 3000</p>
+<p>Location: Karachi, Pakistan</p>
+
+<button class="btn" onclick="alert('Contact School Office For Admission')">
+Apply For Admission
+</button>
+</div>
+</section>
+
+<!-- STUDENTS WEBSITES -->
+<section id="students">
+<h2 class="title">Students Portal</h2>
+
+<div class="card">
+<h3>Students Website 1</h3>
+<p>Study material & resources</p>
+<button class="btn" onclick="openLink('https://sites.google.com/view/yasirapps/tools')">Open</button>
+</div>
+
+<div class="card">
+<h3>Students Website 2</h3>
+<p>Personal student projects</p>
+<button class="btn" onclick="openLink('https://yasirrahim16.github.io/Yasir-rahim/')">Open</button>
+</div>
+</section>
+
+<!-- TOOLS -->
+<section id="tools">
+<h2 class="title">Mobile Tools & Apps</h2>
+
+<div class="card">
+<p>Fix app install issues, download apps & more</p>
+<button class="btn" onclick="openLink('https://sites.google.com/view/yasirapps/tools')">
+Open Tools Page
+</button>
+</div>
 </section>
 
 <footer>
 <p>© 2026 IQRA FURQANIA SECONDARY SCHOOL | Designed by Yasir Rahim</p>
 </footer>
 
-<!-- ===== SOUND SYSTEM ===== -->
-
-<audio id="welcomeSound" preload="auto">
+<!-- SOUNDS -->
+<audio id="welcomeSound">
 <source src="https://assets.mixkit.co/active_storage/sfx/212/212-preview.mp3" type="audio/mpeg">
 </audio>
 
-<audio id="clickSound" preload="auto">
+<audio id="clickSound">
 <source src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3" type="audio/mpeg">
 </audio>
 
 <script>
+let firstClick=false;
 
-let soundEnabled=false;
-
-/* unlock sound on first touch */
-function enableSound(){
-if(!soundEnabled){
-soundEnabled=true;
+document.addEventListener("click",function(){
+if(!firstClick){
+firstClick=true;
 document.getElementById("welcomeSound").play().catch(()=>{});
-}}
-document.addEventListener("click",enableSound);
-document.addEventListener("touchstart",enableSound);
+}
+});
 
-/* button click sound + open site */
-function openExternal(url){
-  
+function openLink(url){
+let s=document.getElementById("clickSound");
+s.currentTime=0;
+s.play();
+setTimeout(()=>{window.open(url,"_blank");},300);
+}
+</script>
+
+</body>
+</html>
