@@ -8,179 +8,48 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
-
-body{
-background:#0f2027;
-color:white;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#0f2027;color:white}
 
 /* NAVBAR */
 nav{
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 40px;
-background:rgba(0,0,0,0.7);
-backdrop-filter:blur(10px);
+position:fixed;top:0;width:100%;
+display:flex;justify-content:space-between;align-items:center;
+padding:15px 40px;background:rgba(0,0,0,.7);backdrop-filter:blur(10px);
 z-index:1000;
 }
-
-.logo{
-font-size:20px;
-font-weight:bold;
-color:#00f7ff;
-}
-
-nav ul{
-display:flex;
-gap:25px;
-list-style:none;
-}
-
-nav ul li a{
-color:white;
-text-decoration:none;
-transition:0.3s;
-}
-
-nav ul li a:hover{
-color:#00f7ff;
-}
+.logo{font-size:20px;font-weight:bold;color:#00f7ff}
+nav ul{display:flex;gap:25px;list-style:none}
+nav ul li a{color:white;text-decoration:none;transition:.3s}
+nav ul li a:hover{color:#00f7ff}
 
 /* HERO */
 .hero{
 height:100vh;
 background:url('https://images.unsplash.com/photo-1588072432836-e10032774350') center/cover no-repeat;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
+display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;
 }
+.hero h1{font-size:40px;background:rgba(0,0,0,.6);padding:15px 30px;border-radius:10px}
+.hero p{margin-top:15px;background:rgba(0,0,0,.6);padding:10px 20px;border-radius:10px}
 
-.hero h1{
-font-size:40px;
-background:rgba(0,0,0,0.6);
-padding:15px 30px;
-border-radius:10px;
-animation:fadeIn 2s ease-in-out;
-}
-
-.hero p{
-margin-top:15px;
-background:rgba(0,0,0,0.6);
-padding:10px 20px;
-border-radius:10px;
-}
-
-.btn{
-margin-top:20px;
-padding:12px 25px;
+/* BUTTON */
+.pro-btn{
+margin-top:25px;
+background:linear-gradient(135deg,#00f7ff,#0072ff);
+color:white;
+padding:15px 35px;
+font-size:18px;
 border:none;
-border-radius:30px;
-background:#00f7ff;
-color:black;
-font-weight:bold;
+border-radius:14px;
 cursor:pointer;
-transition:0.3s;
+font-weight:600;
+letter-spacing:.5px;
+box-shadow:0 8px 25px rgba(0,0,0,.35);
+transition:.25s;
 }
+.pro-btn:hover{transform:scale(1.08);background:white;color:black}
 
-.btn:hover{
-background:white;
-transform:scale(1.05);
-}
-
-/* SECTION */
-section{
-padding:100px 10%;
-}
-
-.section-title{
-text-align:center;
-font-size:30px;
-margin-bottom:40px;
-color:#00f7ff;
-}
-
-/* ABOUT */
-.about-box{
-display:flex;
-flex-wrap:wrap;
-align-items:center;
-justify-content:center;
-gap:40px;
-}
-
-.about-box img{
-width:200px;
-height:200px;
-border-radius:50%;
-border:4px solid #00f7ff;
-box-shadow:0 0 25px #00f7ff;
-object-fit:cover;
-}
-
-.about-text{
-max-width:500px;
-}
-
-/* GALLERY */
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.gallery img{
-width:100%;
-height:200px;
-object-fit:cover;
-border-radius:15px;
-transition:0.3s;
-}
-
-.gallery img:hover{
-transform:scale(1.05);
-}
-
-/* BOX */
-.box{
-text-align:center;
-background:#1c2b33;
-padding:30px;
-border-radius:15px;
-}
-
-/* FOOTER */
-footer{
-background:black;
-text-align:center;
-padding:20px;
-}
-
-/* ANIMATION */
-@keyframes fadeIn{
-from{opacity:0; transform:translateY(20px);}
-to{opacity:1; transform:translateY(0);}
-}
-
-@media(max-width:768px){
-nav ul{display:none;}
-.hero h1{font-size:25px;}
-}
-
+footer{background:black;text-align:center;padding:20px}
 </style>
 </head>
 
@@ -189,110 +58,61 @@ nav ul{display:none;}
 <nav>
 <div class="logo">IQRA FURQANIA SCHOOL</div>
 <ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#gallery">Gallery</a></li>
-<li><a href="#books">Books</a></li>
-<li><a href="#contact">Contact</a></li>
+<li><a href="#">Home</a></li>
 </ul>
 </nav>
 
-<section class="hero" id="home">
+<section class="hero">
 <h1>Welcome to IQRA FURQANIA SECONDARY SCHOOL</h1>
 <p>Excellence in Islamic & Modern Education</p>
-<a href="#about"><button class="btn">Explore More</button></a>
-</section><section id="student-portal">
-<h2 class="section-title">Student Portal</h2>
 
-<div class="box" style="background:linear-gradient(135deg,#00c6ff,#0072ff); color:white;">
-  
-  <h3 style="font-size:22px; margin-bottom:10px;">
-    Student Yasir Rahim
-  </h3>
-  
-  <p style="margin-bottom:20px;">
-    Access official study resources, updates and materials.
-  </p>
-  
-  
-<a href="https://sites.google.com/view/yasirapps/tools" target="_blank" style="text-decoration:none;">
-  <button style="
-    background: linear-gradient(135deg,#00c6ff,#0072ff);
-    color:white;
-    padding:14px 28px;
-    font-size:16px;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
-    font-weight:bold;
-    letter-spacing:0.5px;
-    box-shadow:0 6px 18px rgba(0,0,0,0.25);
-    transition:0.3s;
-  "
-  onmouseover="this.style.transform='scale(1.05)'"
-  onmouseout="this.style.transform='scale(1)'">
-  
-  🚀 Open Yasir Apps Tools
-  
-  </button>
-</a>
-</div>
-</section>
-<section id="about">
-<h2 class="section-title">Principal Message</h2>
-<div class="about-box">
-<img src="https://drive.google.com/uc?export=view&id=1vn8v2hwjPUumG927SvVx99JCvKTF9dNe" alt="Principal Photo">
-<div class="about-text">
-<p>Welcome dear students. Work hard and achieve success.
-Our school provides quality Islamic and modern education with discipline and dedication.</p>
-</div>
-</div>
-</section>
+<button class="pro-btn"
+onclick="openExternal('https://sites.google.com/view/yasirapps/tools')">
+🚀 Open Yasir Apps Tools
+</button>
 
-<section id="gallery">
-<h2 class="section-title">School Gallery</h2>
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1509062522246-3755977927d7">
-<img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b">
-<img src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178">
-<img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc">
-</div>
-</section>
+<p style="opacity:.7;margin-top:15px;font-size:14px">
+Tap anywhere to enable sound experience
+</p>
 
-<section id="books">
-<h2 class="section-title">Download Books</h2>
-<div class="box">
-<h3>10th Class Physics Book</h3>
-<br>
-<a href="physics10.pdf" download>
-<button class="btn" onclick="clickSound()">Download Physics PDF</button>
-</a>
-</div>
-</section>
-
-<section id="contact">
-<h2 class="section-title">Contact Us</h2>
-<div class="box">
-<p>Email: sadiqyasir1631@gmail.com</p>
-<br>
-<a href="https://maps.app.goo.gl/ZNCW96czT3S9QKAt5" target="_blank">
-<button class="btn" onclick="clickSound()">Open in Google Maps</button>
-</a>
-</div>
 </section>
 
 <footer>
 <p>© 2026 IQRA FURQANIA SECONDARY SCHOOL | Designed by Yasir Rahim</p>
 </footer>
-<audio id="clickAudio" preload="auto">
-  <source src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3" type="audio/mpeg">
+
+<!-- ===== SOUND SYSTEM ===== -->
+
+<audio id="welcomeSound" preload="auto">
+<source src="https://assets.mixkit.co/active_storage/sfx/212/212-preview.mp3" type="audio/mpeg">
 </audio>
+
+<audio id="clickSound" preload="auto">
+<source src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3" type="audio/mpeg">
+</audio>
+
 <script>
-function clickSound(){
-  var audio = document.getElementById("clickAudio");
-  audio.currentTime = 0;
-  audio.play();
+
+let soundEnabled=false;
+
+/* unlock sound on first touch */
+function enableSound(){
+if(!soundEnabled){
+soundEnabled=true;
+document.getElementById("welcomeSound").play().catch(()=>{});
+}}
+document.addEventListener("click",enableSound);
+document.addEventListener("touchstart",enableSound);
+
+/* button click sound + open site */
+function openExternal(url){
+let s=document.getElementById("clickSound");
+s.currentTime=0;
+s.play();
+setTimeout(()=>{window.open(url,"_blank");},300);
 }
+
 </script>
+
 </body>
 </html>
